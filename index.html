@@ -1,35 +1,344 @@
 
-<article class="project-card">
-  <div class="project-number">PROJECT 04</div>
-  <h3>InternSafe-AI</h3>
-  <p>
-    A web application designed to help students identify and report
-    suspicious internship offers. Users can submit reports about
-    potentially fraudulent internship opportunities and review
-    reported information.
-  </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pushpanjali Vemuluri - B.Tech CSE student and aspiring web developer.">
+  <title>Pushpanjali Vemuluri | Portfolio</title>
 
-  <div class="skill-list">
-    <span class="skill-tag">React</span>
-    <span class="skill-tag">JavaScript</span>
-    <span class="skill-tag">Node.js</span>
-    <span class="skill-tag">Express.js</span>
-    <span class="skill-tag">PostgreSQL</span>
-  </div>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-  <div class="buttons">
-    <a class="btn btn-primary"
-       href="https://internsafe-ai.vercel.app"
-       target="_blank"
-       rel="noopener noreferrer">
-      Live Demo
-    </a>
+    body {
+      font-family: Arial, sans-serif;
+      background: #080d18;
+      color: #f3f6ff;
+      line-height: 1.6;
+    }
 
-    <a class="btn"
-       href="https://github.com/PushpanjaliVemuluri-1122/Internsafe-AI"
-       target="_blank"
-       rel="noopener noreferrer">
-      GitHub Code
-    </a>
-  </div>
-</article>
+    a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    header {
+      background: #111a2b;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h2 {
+      color: #60a5fa;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #f3f6ff;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    section {
+      padding: 75px 8%;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #60a5fa;
+    }
+
+    .hero p {
+      color: #b8c4d9;
+      margin-bottom: 20px;
+    }
+
+    .profile-img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #60a5fa;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #60a5fa;
+      color: #080d18;
+      padding: 11px 22px;
+      border-radius: 7px;
+      font-weight: bold;
+      margin: 8px 8px 0 0;
+    }
+
+    .btn:hover {
+      background: #a78bfa;
+    }
+
+    h2.section-title {
+      font-size: 30px;
+      color: #60a5fa;
+      margin-bottom: 25px;
+    }
+
+    .about-text {
+      max-width: 850px;
+      color: #cbd5e1;
+    }
+
+    .skills-container,
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #111a2b;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #26344c;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #60a5fa;
+    }
+
+    .card h3 {
+      color: #60a5fa;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      margin-bottom: 12px;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-right: 12px;
+      font-weight: bold;
+    }
+
+    .education-card {
+      max-width: 700px;
+    }
+
+    .contact p {
+      margin: 12px 0;
+      color: #cbd5e1;
+    }
+
+    footer {
+      background: #111a2b;
+      text-align: center;
+      padding: 20px;
+      color: #b8c4d9;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        text-align: center;
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .profile-img {
+        width: 190px;
+        height: 190px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>Pushpanjali.</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Hello, I'm <span>Pushpanjali Vemuluri</span></h1>
+      <h3>B.Tech CSE Student | Aspiring Web Developer</h3>
+      <p>
+        I am passionate about web development and technology.
+        I enjoy learning new skills and building practical projects.
+        I am looking for internship opportunities to improve my
+        technical knowledge and gain real-world experience.
+      </p>
+      <a class="btn" href="#projects">View My Projects</a>
+      <a class="btn" href="resume.pdf" target="_blank">Download Resume</a>
+    </div>
+
+    <img src="profile.jpg" alt="Pushpanjali profile photo" class="profile-img">
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p class="about-text">
+      I am a Computer Science and Engineering student at Newton's
+      Institute of Engineering, affiliated with JNTUK. I have
+      knowledge of HTML, CSS, JavaScript and Python. I am interested
+      in full stack development and continuously working to improve
+      my programming and problem-solving skills. My goal is to become
+      a skilled software developer and gain practical industry experience.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skills-container">
+      <div class="card">
+        <h3>Frontend Development</h3>
+        <p>HTML, CSS, JavaScript</p>
+      </div>
+
+      <div class="card">
+        <h3>Programming</h3>
+        <p>Python</p>
+      </div>
+
+      <div class="card">
+        <h3>Data Science</h3>
+        <p>Python for Data Science fundamentals</p>
+      </div>
+
+      <div class="card">
+        <h3>Currently Learning</h3>
+        <p>React, Node.js and MongoDB</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects-container">
+
+      <div class="card">
+        <h3>Personal Portfolio Website</h3>
+        <p>
+          A responsive personal portfolio website created using
+          HTML and CSS to showcase my skills, education and projects.
+        </p>
+        <a href="https://github.com/PushpanjaliVemuluri-1122/My_portfolio"
+           target="_blank">GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>CreatorHub-AI</h3>
+        <p>
+          A group project based on an AI Content Creator Marketplace
+          concept that connects AI creators with brands and agencies.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Python Practice Programs</h3>
+        <p>
+          A collection of Python practice programs created to
+          improve programming knowledge and logical thinking.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="education">
+    <h2 class="section-title">Education</h2>
+
+    <div class="card education-card">
+      <h3>Bachelor of Technology - Computer Science and Engineering</h3>
+      <p>Newton's Institute of Engineering, Macherla</p>
+      <p>JNTUK</p>
+      <p>Expected Graduation: 2028</p>
+      <p>Current SGPA: 8.00</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">Contact Me</h2>
+
+    <p>Email:
+      <a href="mailto:vemuluripushpanjali@gmail.com">
+        vemuluripushpanjali@gmail.com
+      </a>
+    </p>
+
+    <p>LinkedIn:
+      <a href="https://linkedin.com/in/pushpanjali-vemuluri-a88023428"
+         target="_blank">My LinkedIn Profile</a>
+    </p>
+
+    <p>GitHub:
+      <a href="https://github.com/PushpanjaliVemuluri-1122"
+         target="_blank">My GitHub Profile</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Pushpanjali Vemuluri. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
